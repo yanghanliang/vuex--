@@ -14,6 +14,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { SETNUM } from '@/store/mutation_types'
 
 export default {
   methods: {
@@ -27,8 +28,9 @@ export default {
       // this.$store.commit('setNum', { num: 3 })
 
       // 第二种方式(常用)
+      // SETNUM 常量 常量的值 setNum
       this.$store.commit({
-        type: 'setNum',
+        type: SETNUM,
         num: 4
       })
     }

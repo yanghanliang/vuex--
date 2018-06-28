@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { SETCOUNT, SETNUM } from '@/store/mutation_types'
 Vue.use(Vuex)
 
 // 创建仓库
@@ -19,11 +20,11 @@ const store = new Vuex.Store({
   // 改变状态值
   // 不能进行异步调用
   mutations: {
-    setCount(state) {
+    [SETCOUNT](state) {
       state.count++
     },
     // payload 载荷
-    setNum(state, payload) {
+    [SETNUM](state, payload) {
       console.log(payload)
       state.count += payload.num
     }
