@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-Vue.use(vuex)
+Vue.use(Vuex)
 
 // 创建仓库
 const store = new Vuex.Store({
