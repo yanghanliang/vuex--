@@ -9,9 +9,11 @@ const store = new Vuex.Store({
     count: 0,
     msg: 'Hello Vuex'
   },
-  // 相当于计算属性
+  // 相当于计算属性, 用于处理时间
   getters: {
-
+    msg(state) { // 别忘了传参
+      return state.msg.split('').reverse().join('')
+    }
   },
   // 改变状态值
   mutations: {
