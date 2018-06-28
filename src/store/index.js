@@ -17,9 +17,15 @@ const store = new Vuex.Store({
   },
   // state getters 用于在视图中展示(处理后的)状态
   // 改变状态值
+  // 不能进行异步调用
   mutations: {
     setCount(state) {
       state.count++
+    },
+    // payload 载荷
+    setNum(state, payload) {
+      console.log(payload)
+      state.count += payload.num
     }
   }
 })

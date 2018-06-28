@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   methods: {
@@ -21,8 +21,17 @@ export default {
       // 改变状态的值, 调用 mutation
       // this.$store.commit('setCount')
       // this.setCount()
-      this.set()
-    },
+      // this.set()
+
+      // 第一种方式
+      // this.$store.commit('setNum', { num: 3 })
+
+      // 第二种方式(常用)
+      this.$store.commit({
+        type: 'setNum',
+        num: 4
+      })
+    }
     // 映射 mutation
     // this.setCount --> this.$store.commit('setCount')
     // 方式 1
@@ -31,13 +40,12 @@ export default {
     // ])
     // 方式 2
     // this.set --> this.$store.commit('setCount')
-    ...mapMutations({
-      'set': 'setCount'
-    })
+    // ...mapMutations({
+    //   'set': 'setCount'
+    // })
   },
   // 展示数据
   computed: {
-    // 不能进行异步调用
     ...mapState([
       'count'
     ])
