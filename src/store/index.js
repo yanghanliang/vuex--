@@ -15,9 +15,12 @@ const store = new Vuex.Store({
       return state.msg.split('').reverse().join('')
     }
   },
+  // state getters 用于在视图中展示(处理后的)状态
   // 改变状态值
   mutations: {
-
+    setCount(state) {
+      state.count++
+    }
   }
 })
 
