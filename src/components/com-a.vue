@@ -3,7 +3,7 @@
         com-a
         <br />
         <!-- 获取状态值的第一种用法 -->
-        {{ $store.state.count }}
+        {{ $store.state.msg }}
     </div>
 </template>
 
