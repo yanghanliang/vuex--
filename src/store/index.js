@@ -33,6 +33,12 @@ const store = new Vuex.Store({
     increate(context) {
       // context 中包含了 state getters mutations
       console.log(context)
+      setTimeout(() => {
+        context.commit({
+          type: SETNUM,
+          num: 5
+        })
+      }, 2000)
     }
   }
 })
