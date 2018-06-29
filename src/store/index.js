@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { SETCOUNT, SETNUM } from '@/store/mutation_types'
+import comc from './modules/comc'
+import comd from './modules/comd'
 Vue.use(Vuex)
 
 // 创建仓库
 const store = new Vuex.Store({
+  modules: {
+    comc,
+    comd
+  },
   // 状态
   state: {
     count: 0,

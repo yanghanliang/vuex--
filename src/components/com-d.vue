@@ -5,6 +5,13 @@
         <br />
         <br />
         <button @click="handleClick">按钮</button>
+        <br />
+        <br />
+        显示 comd 对应状态管理模块的值
+        <br />
+        name: {{ this.$store.state.comd.name }}
+        <br />
+        age: {{ this.$store.state.comd.age }}
     </div>
 </template>
 
@@ -16,7 +23,7 @@ export default {
     handleClick() {
       // 调用 action
       // this.$store.dispatch('increate', { num: 7 })
-      
+
       // 第一种写法
       // this.increate({
       //   num: 6
