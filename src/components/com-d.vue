@@ -13,7 +13,7 @@ export default {
   methods: {
     handleClick() {
       // 调用 action
-      this.$store.dispatch('increate')
+      this.$store.dispatch('increate', { num: 7 })
     }
   }
 }

@@ -30,9 +30,16 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    increate(context) {
+    increate(context, payload) {
       // context 中包含了 state getters mutations
       console.log(context)
+
+      context.commit({
+        type: SETNUM,
+        num: payload.num
+      })
+      // 常用 --> 在 action 中进行异步操作
+      // 异步操作结束之后, 在调用 mutation 对 state 重新赋值
       setTimeout(() => {
         context.commit({
           type: SETNUM,
