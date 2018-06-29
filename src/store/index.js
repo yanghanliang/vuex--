@@ -40,12 +40,12 @@ const store = new Vuex.Store({
       })
       // 常用 --> 在 action 中进行异步操作
       // 异步操作结束之后, 在调用 mutation 对 state 重新赋值
-      setTimeout(() => {
-        context.commit({
-          type: SETNUM,
-          num: 5
-        })
-      }, 2000)
+      // setTimeout(() => {
+      //   context.commit({
+      //     type: SETNUM,
+      //     num: 5
+      //   })
+      // }, 2000)
     }
   }
 })
