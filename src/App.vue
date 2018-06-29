@@ -3,6 +3,7 @@
     <com-a></com-a>
     <com-b></com-b>
     <com-c></com-c>
+    <com-d></com-d>
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import comA from '@/components/com-a'
 import comB from '@/components/com-b'
 import comC from '@/components/com-c'
+import comD from '@/components/com-d'
 export default {
   name: 'App',
   components: {
     comA,
     comB,
-    comC
+    comC,
+    comD
   }
 }
 </script>

@@ -28,6 +28,12 @@ const store = new Vuex.Store({
       console.log(payload)
       state.count += payload.num
     }
+  },
+  actions: {
+    increate(context) {
+      // context 中包含了 state getters mutations
+      console.log(context)
+    }
   }
 })
 
