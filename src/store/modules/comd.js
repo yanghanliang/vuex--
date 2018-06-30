@@ -16,7 +16,7 @@ const comc = {
     //   setTimeout(() => {
     //   }, 2000)
     // }
-    setAge( context, payload ) {
+    setAge(context, payload) {
       console.log(context)
       setTimeout(() => {
         context.commit({

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   methods: {
@@ -31,10 +31,17 @@ export default {
       // 所有模块中的成员, 都会添加到根模块中
       // 分模块必须使用命名空间
       // 调用comd模块中的 action
-      this.$store.dispatch('comd/setAge', {
+      // this.$store.dispatch('comd/setAge', {
+      //   age: 100
+      // })
+
+      this['setAge']({
         age: 100
       })
-    }
+    },
+    ...mapActions('comd', [
+      'setAge'
+    ])
   },
   computed: {
     // 第一个参数 命名空间,作用是区分不同的状态模块
@@ -42,7 +49,7 @@ export default {
       'name',
       'age'
     ]),
-    ...mapState('comc',{
+    ...mapState('comc', {
       namec: 'name',
       agec: 'age'
     })
