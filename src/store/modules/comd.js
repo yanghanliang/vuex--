@@ -12,8 +12,17 @@ const comc = {
   },
   actions: {
     // 对参数进行解构
-    setAge({ commit }, payload) {
+    // setAge({ commit }, payload) {
+    //   setTimeout(() => {
+    //   }, 2000)
+    // }
+    setAge( context, payload ) {
+      console.log(context)
       setTimeout(() => {
+        context.commit({
+          type: 'setAge',
+          age: payload.age
+        })
       }, 2000)
     }
   }

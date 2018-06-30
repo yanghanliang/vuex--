@@ -38,7 +38,8 @@ const store = new Vuex.Store({
   actions: {
     increate(context, payload) {
       // context 中包含了 state getters mutations
-      console.log(context)
+      // console.log(context)
+      // rootState 根模块的所有状态
 
       context.commit({
         type: SETNUM,
